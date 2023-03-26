@@ -1,0 +1,22 @@
+{
+	"name_data":{
+		"marko":{"genre":"masculin","age":"jeune","time":[]},
+		"bernard":{"genre":"masculin","age":"vieux","time":[]},
+		"lina":{"genre":"feminin","age":"jeune","time":[]},
+		"diego":{"genre":"masculin","age":"jeune","time":[]},
+		"béatrice":{"genre":"feminin","age":"vieux","time":[]},
+		"leyna":{"genre":"feminin","age":"jeune","time":[]},
+		"morice":{"genre":"masculin","age":"vieux","time":[]},
+		"maurice":{"genre":"masculin","age":"vieux","time":[]},
+		"michelle":{"genre":"feminin","age":"vieux","time":[]},
+		"michel":{"genre":"masculin","age":"vieux","time":[]},
+		"nils":{"genre":"masculin","age":"jeune","time":[]},
+		"nicholas":{"genre":"masculin","age":"jeune","time":[]},
+		"christelle":{"genre":"feminin","age":"vieux","time":[]},
+		"diana":{"genre":"feminin","age":"jeune","time":[]},
+		"yuna":{"genre":"feminin","age":"jeune","time":[]},
+		"juliette":{"genre":"feminin","age":"jeune","time":[]}
+
+	}
+	
+}

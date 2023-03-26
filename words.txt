@@ -1,0 +1,20 @@
+b"est=1.\xc2\xa0C\xc3\xb4t\xc3\xa9 de l'horizon o\xc3\xb9 le soleil se l\xc3\xa8ve\xc2\xa0; l'un des quatre points cardinaux, \xc3\xa0 droite quand on est face au nord.<p ;;ouest;sud;nord;=nom=masculin"
+b'entrepris=1.\xc2\xa0Commencer \xc3\xa0 ex\xc3\xa9cuter une action, en g\xc3\xa9n\xc3\xa9ral longue ou complexe\xc2\xa0:;;entreprend;entreprendre;entam\xc3\xa9;men\xc3\xa9;=verbe=transitif'
+b'chinois=1.\xc2\xa0De Chine.;;vietnamiens;=adjectif=masculin'
+b"fabriquant=1.\xc2\xa0Faire quelque chose, l'\xc3\xa9laborer \xc3\xa0 partir d'une mati\xc3\xa8re premi\xc3\xa8re par un travail manuel, artisanal\xc2\xa0:;;fabrique;fabriquer;constructeur;confectionneur;=verbe=passif"
+b"ordinateurs,=tique de traitement de l'information, ob\xc3\xa9issant \xc3\xa0 des programmes form\xc3\xa9s par des suites d'op\xc3\xa9rations arithm\xc3\xa9tiques et logiques.<p ;;=nom=masculin"
+b't\xc3\xa9l\xc3\xa9phones,=1.\xc2\xa0Installation de t\xc3\xa9l\xc3\xa9phonie\xc2\xa0; r\xc3\xa9seau t\xc3\xa9l\xc3\xa9phonique.;;=nom=masculin'
+b"stations=1.\xc2\xa0Fa\xc3\xa7on de se tenir, position d'une personne\xc2\xa0:;;=nom=f\xc3\xa9minin"
+b"travail,=1.\xc2\xa0Activit\xc3\xa9 de l'homme appliqu\xc3\xa9e \xc3\xa0 la production, \xc3\xa0 la cr\xc3\xa9ation, \xc3\xa0 l'entretien de quelque chose\xc2\xa0:;;=nom=masculin"
+b'serveurs=y\xc3\xa9e dans un caf\xc3\xa9, un restaurant, pour servir la client\xc3\xa8le.<p ;;ordinateurs;h\xc3\xa9bergeurs;autocoms;routeurs;=nom=masculin'
+b"informatiques=1.\xc2\xa0Science du traitement automatique et rationnel de l'information consid\xc3\xa9r\xc3\xa9e comme le support des connaissances et des communications.;;\xc3\xa9lectroniques;num\xc3\xa9riques;logiciels;r\xc3\xa9seautiques;=nom=f\xc3\xa9minin"
+b"t\xc3\xa9l\xc3\xa9visions=1.\xc2\xa0Transmission, par c\xc3\xa2ble ou par ondes radio\xc3\xa9lectriques, d'images pouvant \xc3\xaatre reproduites sur un \xc3\xa9cran au fur et \xc3\xa0 mesure de leur r\xc3\xa9ception, ou enregistr\xc3\xa9es en vue d'une reproduction ult\xc3\xa9rieure.<p ;;t\xc3\xa9l\xc3\xa9s;radios;t\xc3\xa9l\xc3\xa9viseurs;cha\xc3\xaenes;=nom=f\xc3\xa9minin"
+b'connect\xc3\xa9es.=1.\xc2\xa0Unir des choses en les mettant en relation entre elles.;;=verbe=transitif'
+b"s'est=1.\xc2\xa0C\xc3\xb4t\xc3\xa9 de l'horizon o\xc3\xb9 le soleil se l\xc3\xa8ve\xc2\xa0; l'un des quatre points cardinaux, \xc3\xa0 droite quand on est face au nord.<p ;;=nom=masculin"
+b'fait=1.\xc2\xa0Acte, ph\xc3\xa9nom\xc3\xa8ne, action\xc2\xa0:;;faisant;faisait;fasse;fera;=nom=masculin'
+b'rachet\xc3\xa9=1.\xc2\xa0 ;;revend;rachetait;c\xc3\xa8de;acquiert;=verbe=transitif'
+b'division=1.\xc2\xa0Action de s\xc3\xa9parer, de diviser en parties distinctes\xc2\xa0; \xc3\xa9tat qui en r\xc3\xa9sulte\xc2\xa0:;;brigade;=nom=f\xc3\xa9minin'
+b"devenant=1.\xc2\xa0Passer d'un \xc3\xa9tat \xc3\xa0 un autre\xc2\xa0:;;devient;devenir;devint;devenu;=verbe=intransitif"
+b"premier=1.\xc2\xa0Marque le d\xc3\xa9but d'une suite, d'une s\xc3\xa9rie d'\xc3\xa9l\xc3\xa9ments de m\xc3\xaame nature, ordonn\xc3\xa9e et num\xc3\xa9rot\xc3\xa9e\xc2\xa0:;;ministre;second;gouvernement;dernier;=adjectif=num\xc3\xa9ral"
+b'constructeur=ois"><a ;;fabricant;=nom=masculin'
+b"mondial=1.\xc2\xa0Relatif au monde entier, \xc3\xa0 l'ensemble des \xc3\x89tats\xc2\xa0:;;championnat;international;=adjectif=masculin"
