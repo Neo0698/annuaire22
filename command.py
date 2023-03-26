@@ -422,11 +422,12 @@ class command_interpreter():
 
 
 
-                user_data=importation_manager.database_com.Registry.get_user_data(query[1].replae("_",""),importation_manager)
+                user_data=importation_manager.database_com.Registry.get_user_data(query[1].replace("_",""),importation_manager)
 
 
 
-            except:
+            except Exception as e:
+                print(e)
 
 
 
