@@ -7,7 +7,7 @@ function search_user(){
 	const xhttp = new XMLHttpRequest();
 	input=document.getElementById("user_input").value;
 	
-	fetch('/post-data', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ data: "cherche "+input })})
+	fetch('/post-data', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ data: "cherche "+input.replaceAll(" ","_") })})
 	.then(response => {
 		console.log(response);
 		return response.text(); // Change to response.text() instead of response.json()
