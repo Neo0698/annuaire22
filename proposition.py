@@ -178,7 +178,7 @@ def get_similarities(search,users_list):
 
 			for letter in search.lower():
 
-				if((str(users_list[el]["username"])+str(el)).lower().count(str(letter))==search.count(letter)):
+				if((str(users_list[el]["username"])).lower().count(str(letter))==search.count(letter)):
 					score+=1
 			if(len(search)>len(users_list[el]["username"])):
 				biggest_word=len(search)
