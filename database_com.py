@@ -1,4 +1,9 @@
 def encoder_mot_cle(texte, mot_cle):
+    """Prends 2 variables :
+	texte : le texte à encoder
+	mot_cle : la clé d'encodage
+	S'occupe d'encoder la variable texte en fonction du mot clé donné.
+    """
     # Dictionnaire de correspondance entre les lettres et les chiffres
     correspondance = {
         'A': 0,
