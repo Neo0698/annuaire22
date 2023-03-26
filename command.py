@@ -1,67 +1,5 @@
 import json  
 
-def encoder_mot_cle(texte, mot_cle):
-    # Dictionnaire de correspondance entre les lettres et les chiffres
-    correspondance = {
-        'A': 0,
-        'B': 1,
-        'C': 2,
-        'D': 3,
-        'E': 4,
-        'F': 5,
-        'G': 6,
-        'H': 7,
-        'I': 8,
-        'J': 9,
-        'K': 10,
-        'L': 11,
-        'M': 12,
-        'N': 13,
-        'O': 14,
-        'P': 15,
-        'Q': 16,
-        'R': 17,
-        'S': 18,
-        'T': 19,
-        'U': 20,
-        'V': 21,
-        'W': 22,
-        'X': 23,
-        'Y': 24,
-        'Z': 25
-    }
-    alphabet="abcdefghijklmnopqrstuvwxyz"
-    i=0
-    for el in ["0","1","2","3","4","5","6","7","8","9","*","$","ç","!","?",";",",","."]:
-        mot_cle=mot_cle.replace(el,alphabet[i])
-        i+=1
-        
-    # Convertir le mot-clé en une clé numérique
-    
-    key_num = sum([correspondance[lettre.upper()] for lettre in mot_cle])
-
-    # Encoder chaque lettre du texte
-    texte_encode = ''
-    for lettre in texte:
-        if lettre.isalpha():
-            # Convertir la lettre en un nombre
-            lettre_num = correspondance[lettre.upper()]
-
-            # Ajouter la clé numérique à la lettre
-            lettre_encodee_num = (lettre_num + key_num) % 26
-
-            # Convertir le nombre en lettre
-            lettre_encodee = list(correspondance.keys())[list(correspondance.values()).index(lettre_encodee_num)]
-
-            # Ajouter la lettre encodée au texte encodé
-            texte_encode += lettre_encodee
-        else:
-            # Ajouter les caractères spéciaux tels quels au texte encodé
-            texte_encode += lettre
-
-    return texte_encode
-
-
 def decoder_mot_cle(texte_encode, mot_cle):
 
     # Dictionnaire de correspondance entre les lettres et les chiffres
@@ -812,10 +750,9 @@ def command(query,dictionnary_instruction,dictionnary_lang,settings,importation_
         data_user=json.load(file_)
 
         try:
-            print(data_user[query[1]]["password"])
-            print(encoder_mot_cle(query[2],query[2][:2]))
+            
 
-            if(data_user[query[1]]["password"]==encoder_mot_cle(query[2],query[2][:2])):
+            if(data_user[query[1]]["password"]==importation_manager.database_com.encoder_mot_cle(query[2],query[2][:2])):
 
                 return '{"message":"bienvenue","token":"'+str(token)+'"}'
 
