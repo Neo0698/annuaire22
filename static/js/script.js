@@ -222,13 +222,13 @@ function create_user(){
 }
 
 function give_token(data){
-	alert(data);
+	
 	const json_data =JSON.parse(data);
 	localStorage.token=json_data.token;
 	if (String(localStorage.token).length > 1){
 		location.hash = "#";
 	}
-	alert(data);
+	
 }
 
 function popup_on_first_time(){
