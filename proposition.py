@@ -189,7 +189,7 @@ def get_similarities(search,users_list):
 				min_score=0.8
 			if(score/biggest_word>min_score):
 				users_by_score.append((el,score/biggest_word))
-			elif(score/biggest_word>0.55):
+			elif(score/len(search)>0.55):
 				last_option_score.append((el,score/biggest_word))
 
 
