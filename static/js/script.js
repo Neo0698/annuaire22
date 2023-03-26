@@ -6,16 +6,17 @@ function search_user(){
 	var send_message=false;
 	const xhttp = new XMLHttpRequest();
 	input=document.getElementById("user_input").value;
-	
-	fetch('/post-data', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ data: "cherche "+input.replaceAll(" ","_") })})
-	.then(response => {
-		console.log(response);
-		return response.text(); // Change to response.text() instead of response.json()
-	})
-	.then(data => document.getElementById("result").innerHTML = data) // Set the innerHTML to the response text
-	.catch(error => {
-		console.error(error);
-	});
+	if(input.length>2){
+		fetch('/post-data', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ data: "cherche "+input.replaceAll(" ","_") })})
+		.then(response => {
+			console.log(response);
+			return response.text(); // Change to response.text() instead of response.json()
+		})
+		.then(data => document.getElementById("result").innerHTML = data) // Set the innerHTML to the response text
+		.catch(error => {
+			console.error(error);
+		});
+	}
 }
 
 function add_user(){
