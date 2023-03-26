@@ -172,58 +172,59 @@ def get_similarities(search,users_list):
 				
 				users_by_score.append((el,1.1))
 	
-	for el in list(users_list.keys()):
-		score=0
+	else:
+		for el in list(users_list.keys()):
+			score=0
 
-		for letter in search.lower():
+			for letter in search.lower():
 
-			if((str(users_list[el]["username"])+str(el)).lower().count(str(letter))==search.count(letter)):
-				score+=1
-		if(len(search)>len(users_list[el]["username"])):
-			biggest_word=len(search)
-		else:
-			biggest_word=len(users_list[el]["username"])
-		min_score=0.55
-		if(len(search)>4):
-			min_score=0.8
-		if(score/biggest_word>min_score):
-			users_by_score.append((el,score/biggest_word))
-		elif(score/biggest_word>0.55):
-			last_option_score.append((el,score/biggest_word))
-	
-	
-	for el in list(users_list.keys()):
-		score=0
-
-		for letter in search.lower():
-			
-			if((str(users_list[el]["lastname"])).lower().find(str(letter))!=-1 ):
-				score+=1
-		
-		if(len(search)>len(users_list[el]["lastname"])):
-			biggest_word=len(search)
-		else:
-			biggest_word=len(users_list[el]["lastname"])
-		min_score=0.55
-		if(len(search)>4):
-			min_score=0.8
-		if(score/biggest_word>min_score):
-			users_by_score.append((el,score/biggest_word))
+				if((str(users_list[el]["username"])+str(el)).lower().count(str(letter))==search.count(letter)):
+					score+=1
+			if(len(search)>len(users_list[el]["username"])):
+				biggest_word=len(search)
+			else:
+				biggest_word=len(users_list[el]["username"])
+			min_score=0.55
+			if(len(search)>4):
+				min_score=0.8
+			if(score/biggest_word>min_score):
+				users_by_score.append((el,score/biggest_word))
+			elif(score/biggest_word>0.55):
+				last_option_score.append((el,score/biggest_word))
 
 
-	
-	for el in list(users_list.keys()):
-		score=0
-		
-		for letter in search.lower().split(" "):
+		for el in list(users_list.keys()):
+			score=0
 
-			if((str(users_list[el]["comment"])+str(el)).lower().find(str(letter))!=-1 ):
-				
-				score+=1
-		
-		
-		if(score/len(search.split(" "))>0.8):
-			users_by_score.append((el,score/len(search.split(" "))))
+			for letter in search.lower():
+
+				if((str(users_list[el]["lastname"])).lower().find(str(letter))!=-1 ):
+					score+=1
+
+			if(len(search)>len(users_list[el]["lastname"])):
+				biggest_word=len(search)
+			else:
+				biggest_word=len(users_list[el]["lastname"])
+			min_score=0.55
+			if(len(search)>4):
+				min_score=0.8
+			if(score/biggest_word>min_score):
+				users_by_score.append((el,score/biggest_word))
+
+
+
+		for el in list(users_list.keys()):
+			score=0
+
+			for letter in search.lower().split(" "):
+
+				if((str(users_list[el]["comment"])+str(el)).lower().find(str(letter))!=-1 ):
+
+					score+=1
+
+
+			if(score/len(search.split(" "))>0.8):
+				users_by_score.append((el,score/len(search.split(" "))))
 	if(users_by_score==[]):
 		users_by_score=last_option_score
 	users_by_score.sort()
