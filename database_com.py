@@ -1,32 +1,13 @@
 def encoder_mot_cle(texte, mot_cle):
     # Dictionnaire de correspondance entre les lettres et les chiffres
     correspondance = {
-        'A': 0,
-        'B': 1,
-        'C': 2,
-        'D': 3,
-        'E': 4,
-        'F': 5,
-        'G': 6,
-        'H': 7,
-        'I': 8,
-        'J': 9,
-        'K': 10,
-        'L': 11,
-        'M': 12,
-        'N': 13,
-        'O': 14,
-        'P': 15,
-        'Q': 16,
-        'R': 17,
-        'S': 18,
-        'T': 19,
-        'U': 20,
-        'V': 21,
-        'W': 22,
-        'X': 23,
-        'Y': 24,
-        'Z': 25
+        'A': 0,'B': 1,'C': 2,'D': 3,
+        'E': 4,'F': 5,'G': 6,'H': 7,
+        'I': 8,'J': 9,'K': 10,'L': 11,
+        'M': 12,'N': 13,'O': 14,'P': 15,
+        'Q': 16,'R': 17,'S': 18,'T': 19,
+        'U': 20,'V': 21,'W': 22,'X': 23,
+        'Y': 24,'Z': 25
     }
     alphabet="abcdefghijklmnopqrstuvwxyz"
     i=0
@@ -35,7 +16,6 @@ def encoder_mot_cle(texte, mot_cle):
         i+=1
         
     # Convertir le mot-clé en une clé numérique
-    
     key_num = sum([correspondance[lettre.upper()] for lettre in mot_cle])
 
     # Encoder chaque lettre du texte
@@ -87,7 +67,7 @@ class external_data:
 				synonyme2+=el+";"
 				i+=1
 		
-		return synonyme2# retourne tous les synonyme récoltés séparé par des points virgules, dans une variable de type chaine de charactère(string)
+		return synonyme2 # Renvoie tous les synonymes récoltés séparé par des points virgules, dans une variable de type chaine de charactère(string)
 		
 		
 	def definition(data, importation_manager):
@@ -294,8 +274,6 @@ class Registry:
 			f.close()
 		except KeyError:
 			return dictionnary_lang["KeyError"].format(user)
-		
-
 		
 		return dictionnary_lang["change_information"]
 		
