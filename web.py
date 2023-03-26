@@ -32,4 +32,4 @@ def post_data():
     re_data=re_data.replace("<p></p>","")
     return re_data.replace("%20"," ")
 
-app.run(debug=False,host="0.0.0.0", port=911)
+app.run(debug=False,host="127.0.0.1")
