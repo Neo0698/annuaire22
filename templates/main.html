@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        
+    </head>
+    <body onload="popup_on_first_time()">
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeLeftMenu()">&times;</a>
+      <a onclick="location.reload();all_none()"><b>Rechercher</b></a>
+      <a href="javascript:void(0)" onclick="add_option_show();closeLeftMenu();"><b>Ajouter</b></a>
+      <a href="javascript:void(0)" onclick="change_option_show();closeLeftMenu();"><b>Modifier</b></a>
+      <a href="javascript:void(0)" onclick="suppr_option_show();closeLeftMenu();"><b>Supprimer</b></a>
+      <!--<a href="javascript:void(0)" onclick="settings_option_show();closeLeftMenu();">Paramètres</a>-->
+    </div>
+    <div id="decosidebar"></div>
+    <div id="decotopbar"></div>
+    <span style="font-size:30px;cursor:pointer;padding-left: 15px;" onclick="openNav()">&#9776;</span>
+
+    <script>//script pour le menu des options
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      
+    }
+
+    function closeLeftMenu() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+    </script>
+    
+        <div id="center_window_objects">
+
+            <center>
+                <header id="titletext" style="text-align: center;cursor: pointer" onclick="location.reload()"><b>Répertoire Téléphonique</b></header>
+                <div id="search_box">
+                    <input type="text" id="user_input" placeholder="Rechercher un numéro">
+                    <button type="button" id="user_button" onclick="search_user();all_none();">Valider</button>      
+                </div>
+            </center>
+            <br>
+
+            <div class="overlay" id="centered_login" style="display: flex; justify-content: center;">
+                <div id="popup_login" style="background-color: lightgrey;">
+                    <p><b>Se connecter</b></p>
+                    <label>Nom d'utilisateur</label> : <input type="email" id="username_login_input" placeholder="Nom d'utilisateur"><br>
+                    <label>Mot de passe</label> : <input type="password" id="password_login_input" placeholder="Mot-de-passe">
+                    <p>Vous n'avez pas de compte? <b style="text-decoration: underline; color: blue;cursor: pointer;"><a onclick="location.hash = 'centered_signin';suppr_input_values();">Créer un compte</a></b></p>
+                    <span id="login_button_submit" onclick="connect_user();suppr_input_values();">Soumettre</span><br>
+                </div>
+            </div>
+
+            <div class="overlay" id="centered_signin" style="display: flex; justify-content: center;">
+                <div id="popup_signin" style="background-color: lightgrey;">
+                    <p><b>Créer un compte</b></p>
+                    <label>Nom d'utilisateur</label> : <input type="email" id="username_signin_input" placeholder="Nom d'utilisateur"><br>
+                    <label>Mot de passe</label> : <input type="password" id="password_signin_input" placeholder="Mot-de-passe">
+                    <p>Vous avez déjà un compte? <b style="text-decoration: underline; color: blue;cursor: pointer;"><a onclick="location.hash = 'centered_login';suppr_input_values();">Se connecter</a></b></p>
+                    <span id="signin_button_submit" onclick="create_user();suppr_input_values();">Soumettre</span><br>
+                </div>
+            </div>
+
+            <div id="add_option" style="display: none;">
+                <input type="text" id="username_input" placeholder="Prénom"><br>
+                <input type="text" id="lastname_input" placeholder="Nom"><br>
+                <input type="text" id="email_input" placeholder="Mél"><br>
+                <input type="text" id="address_input" placeholder="Adresse postale"><br>
+                <input type="text" id="description_input" placeholder="Description du contact"><br>
+                <input type="text" id="phone_input" placeholder="Numéro Téléphonique*"><br><br>
+                <span class="soumettre_button" onclick="add_user();all_none()">Soumettre</span><br>
+            </div>
+
+            <div id ="change_option" style="display:none; margin-left: 10px;">
+                <label>Numéro du contact à modifier :</label> <input type="text" id="modify_input" placeholder="Numéro Téléphonique"><br><br>
+                <select id="argument_selector" onchange="actualisation_change_placeholder()"> < ! --selections des éléments disponibles dans la base de donnée pour chaque utilisateur-- > 
+                    <option value="username">Prénom du contact</option>
+                    <option value="lastname">Nom contact</option>
+                    <option value="email">Mél</option>
+                    <option value="address">Adresse postale</option>
+                    <option value="comment">Description du contact</option>
+                </select>
+                <input id="change_input" name="change_input" type="text" placeholder=""><br><br>
+                <span  class="soumettre_button" id="button_change" onclick="change_implement();all_none()">Soumettre</span>
+            </div>
+
+            <div id="suppr_option" style="display:none; margin-left: 10px;">
+                <label>Numéro du contact à supprimer :</label> <input type="text" id="delete_input" placeholder="Numéro Téléphonique"><br><br>
+                <span  class="soumettre_button" id="button_change" onclick="delete_user();all_none()">Soumettre</span>
+            </div>
+
+            <div id="result" style="margin-left: 40px;margin-top:20px;font-size:20px;"></div>
+
+        </div>
+
+    </body>
+</html>
