@@ -422,7 +422,7 @@ class command_interpreter():
 
 
 
-                user_data=importation_manager.database_com.Registry.get_user_data(query[1],importation_manager)
+                user_data=importation_manager.database_com.Registry.get_user_data(query[1].replae("_",""),importation_manager)
 
 
 
@@ -436,13 +436,7 @@ class command_interpreter():
 
             user_data[argument_changed]=query[3]
 
-
-
-            print(user_data)
-
-
-
-            importation_manager.database_com.Registry.add(query[1],user_data,dictionnary_lang,importation_manager)
+            importation_manager.database_com.Registry.add(query[1].replace("_",""),user_data,dictionnary_lang,importation_manager)
 
 
 
@@ -536,7 +530,7 @@ class command_interpreter():
 
 
 
-        importation_manager.database_com.Registry.add(query[1],{"username":username,"lastname":lastname,"email":email,
+        importation_manager.database_com.Registry.add(query[1].replace("_",""),{"username":username,"lastname":lastname,"email":email,
 
 
 
