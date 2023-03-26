@@ -175,21 +175,28 @@ def get_similarities(search,users_list):
 	else:
 		for el in list(users_list.keys()):
 			score=0
-
+			last_score=0
 			for letter in search.lower():
 
 				if((str(users_list[el]["username"])).lower().count(str(letter))==search.count(letter)):
 					score+=1
+				if((str(users_list[el]["username"])).lower().find(str(letter))!=-1):
+
+					last_score+=1
 			if(len(search)>len(users_list[el]["username"])):
 				biggest_word=len(search)
 			else:
 				biggest_word=len(users_list[el]["username"])
 			min_score=0.55
+			print(users_list[el]["username"])
+			print(last_score/len(search))
 			if(len(search)>4):
 				min_score=0.8
 			if(score/biggest_word>min_score):
 				users_by_score.append((el,score/biggest_word))
-			elif(score/biggest_word>0.55):
+			elif(last_score/len(search)>0.55):
+				if(last_score/len(search)==1):
+					users_by_score.append((el,score/biggest_word))
 				last_option_score.append((el,score/biggest_word))
 
 
@@ -376,4 +383,3 @@ def get_search_users(user,importation_manager):
 		return_list+=users_json[el[1]]["username"]+" "+users_json[el[1]]["lastname"]+'<br><a href="tel:'+el[1]+'">'+el[1]+"</a><br>"+users_json[el[1]]["email"]+"<br><p>"+users_json[el[1]]["address"]+"<p>"+users_json[el[1]]["comment"]+"<p>--------<p>"
 
 	return return_list,might_interest
-
